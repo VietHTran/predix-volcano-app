@@ -152,7 +152,7 @@ window.addEventListener('WebComponentsReady', function() {
         } else {
             hostname = "https://" + hostname;
         }
-        var url = hostname + "/node/" + nodeId + "/" + sensorTagsSpan;
+        var url = hostname + "/node/" + nodeId + "/" + sensorTagsSpan + "/";
 
         // Copy url to clipboard
         var container = document.createElement('div');
