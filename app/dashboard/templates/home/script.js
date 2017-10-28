@@ -149,6 +149,8 @@ window.addEventListener('WebComponentsReady', function() {
         var hostname = window.location.hostname;
         if (hostname==="localhost" || hostname==="127.0.0.1") { // when debugging
             hostname += ":" + window.location.port;
+        } else {
+            hostname = "https://" + hostname;
         }
         var url = hostname + "/node/" + nodeId + "/" + sensorTagsSpan;
 
