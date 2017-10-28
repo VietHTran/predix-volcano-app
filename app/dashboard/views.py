@@ -1,7 +1,6 @@
 import re
 import json
 from flask import render_template, request, make_response
-import httplib2
 import json
 import predix.data.asset
 from . import dashboard
