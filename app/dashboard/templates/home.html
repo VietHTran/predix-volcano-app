@@ -18,8 +18,8 @@
     </head>
     <body>
 
-    <!-- Include a fork me on github ribbon in upper right corner -->
-    {% include "home/fork-me-on-github.html.j2" %}
+        <!-- Include a fork me on github ribbon in upper right corner -->
+        {% include "home/fork-me-on-github.html.j2" %}
 
     <!-- Include common header styling for Powered by Predix apps -->
     {% include "common/header.html.j2" %}
@@ -41,14 +41,17 @@
     <!-- Basic dropdown and refresh buttons for selecting data to display -->
     <div id="parent" class="u-desk-m++ u-desk-p">
         <div class="layout layout--middle layout--center">
-            <div class="layout__item u-1/4 u-1/1-palm">
+            <div class="layout__item u-1/5 u-1/1-palm">
                 {% include "home/node-select.html.j2" %}
             </div>
-            <div class="layout__item u-1/4 u-1/1-palm">
+            <div class="layout__item u-1/5 u-1/1-palm">
                 {% include "home/sensor-select.html.j2" %}
             </div>
-            <div class="layout__item u-1/4 u-1/1-palm">
+            <div class="layout__item u-1/5 u-1/1-palm">
                 {% include "home/refresh-button.html.j2" %}
+            </div>
+            <div class="layout__item u-1/5 u-1/1-palm">
+                {% include "home/get-link-button.html.j2" %}
             </div>
         </div>
     </div>
@@ -70,6 +73,10 @@
 
     <!-- Include interactive behaviors -->
     {% include "home/script.js" %}
+
+    <!-- Use these span tags to communicate between python and javascript-->
+    <span id="node_id_span" style="display: none">{{ node_id }}</span>
+    <span id="sensor_tags_span" style="display: none">{{ sensor_tags }}</span>
 
 </body>
 </html>
